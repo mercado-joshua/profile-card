@@ -1,0 +1,122 @@
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0;
+}
+
+.image {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+body {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background-color: #2d3248;
+  overflow: hidden;
+}
+body::before {
+  content: "";
+  position: absolute;
+  top: -500px;
+  left: -150px;
+  height: 800px;
+  width: 800px;
+  background: url("../images/bg-pattern-top.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body::after {
+  content: "";
+  position: absolute;
+  bottom: -500px;
+  right: -150px;
+  height: 800px;
+  width: 800px;
+  background: url("../images/bg-pattern-bottom.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.profile-card {
+  position: relative;
+  z-index: 1;
+  border-radius: 1em;
+  max-width: 350px;
+  background-color: #fff;
+  overflow: hidden;
+}
+.profile-card > .imagebox {
+  position: relative;
+}
+.profile-card > .imagebox > .avatarbox {
+  position: absolute;
+  top: 60%;
+  left: 35%;
+  display: inline-block;
+  border: 0.4em solid #fff;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.profile-card > .contentbox {
+  margin-top: 4em;
+  border-bottom: 1px solid #969696;
+  padding-bottom: 1.2em;
+}
+.profile-card > .contentbox > .info,
+.profile-card > .contentbox > .location {
+  margin: 0;
+  text-align: center;
+}
+.profile-card > .contentbox > .info {
+  font-size: 1.5rem;
+}
+.profile-card > .contentbox > .info > .name {
+  font-weight: bold;
+}
+.profile-card > .contentbox > .location {
+  color: #969696;
+}
+.profile-card .statsbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.5em;
+}
+.profile-card .statsbox > .column > .count,
+.profile-card .statsbox > .column > .category {
+  margin: 0;
+  text-align: center;
+}
+.profile-card .statsbox > .column > .count {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.profile-card .statsbox > .column > .category {
+  color: #969696;
+}
